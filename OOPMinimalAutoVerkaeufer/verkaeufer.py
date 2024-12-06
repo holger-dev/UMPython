@@ -21,10 +21,10 @@ class Verkaeufer:
             print("Auto mit den meisten PS: ", tempAuto)
         else:
             print("Keine Autos beim Verkaeufer!")
-            
+    
     def doVerkauf(self, auto, kunde):
         if auto in self.autosZumVerkauf:
-            if(auto.verkaufsbereit):
+            if(auto.verkaufsbereit == True):
                 kunde.addAuto(auto)
                 self.autosZumVerkauf.remove(auto)
                 print("Verkauf abgeschlossen")
@@ -32,3 +32,12 @@ class Verkaeufer:
                 print("Dieses Auto kann aktuell nicht verkauft werden!")
         else:
             print("Dieses Auto kann dieser Verkäufer nicht verkaufen!")
+
+
+
+
+
+
+
+
+
