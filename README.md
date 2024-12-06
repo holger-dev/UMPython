@@ -10,7 +10,7 @@ Dieses Minimalprojekt ist eine Musterlösung für das Projekt Paintballhalle.
 Die Demodaten zeigen drei Testszenarien. Die Ausgabe ist nur mit True und False, da dieses Minimal-Projekt als Grundlage für ein weiteres Projekt mit GUI dient. Daher ist dies als Grundstruktur des Backends zu sehen.
 ***
 ## Projekt PaintballehalleGUI
-Status: ToDo
+Status: ToDo \n
 Hier soll die Grundstruktur aus dem Projekt Paintballhalle als Grundlage verwendet und mit einem Frontend verbunden werden. 
 ***
 ## Projekt PaintballhalleGUIundSQLite3
