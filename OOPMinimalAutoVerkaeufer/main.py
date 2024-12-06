@@ -35,11 +35,11 @@ from verkaeufer import Verkaeufer
 Kunde1 = Kunde(name = "Bernd Müller")
 Verkaeufer1 = Verkaeufer(name="Jens")
 
-Auto1 = Auto(marke="VW", ps=165, verkaufsbereit=False)
-Auto2 = Auto(marke="Toyota", ps=86, verkaufsbereit=True)
-Auto3 = Auto(marke="Audi", ps=220, verkaufsbereit=True)
-Auto4 = Auto(marke="Skoda", ps=135, verkaufsbereit=True)
-Auto5 = Auto(marke="Kia", ps=65, verkaufsbereit=False)
+Auto1 = Auto(marke="VW", ps=165, preis=20000, verkaufsbereit=False)
+Auto2 = Auto(marke="Toyota", ps=86, preis=5000, verkaufsbereit=True)
+Auto3 = Auto(marke="Audi", ps=220, preis=12500, verkaufsbereit=True)
+Auto4 = Auto(marke="Skoda", ps=135, preis=2000, verkaufsbereit=True)
+Auto5 = Auto(marke="Kia", ps=65, preis=4300, verkaufsbereit=False)
 
 # ANFORDERUNGEN
 # Aufgabe 1
@@ -64,7 +64,21 @@ Verkaeufer1.doVerkauf(kunde = Kunde1, auto = Auto2)
 # Testausgabe, dass das Auto beim Kunden angekommen ist
 print(Kunde1)
 
+# Erweiterung Summe aller Autos
+Verkaeufer1.calcGesamtsumme()
 
+# Höchster/NiedrigsterPreis
+Verkaeufer1.hoechsterPreis()
+Verkaeufer1.niedrigsterPreis()
 
+# Durchschnitt
+Verkaeufer1.calcDurchschnitt()
+
+# Bubblesort
+print("########################################")
+Verkaeufer1.printAlleAutosZumVerkauf()
+Verkaeufer1.bubble()
+print("########################################")
+Verkaeufer1.printAlleAutosZumVerkauf()
 
 
