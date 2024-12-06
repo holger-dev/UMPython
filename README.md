@@ -19,3 +19,7 @@ In diesem Projekt werden die Daten persistend gespeichert und die grundlegenden 
 ## OOPMinimapAutoVerkaeufer
 Status. Done
 Hier wird eine Minimalstruktur OOP gezeigt inkl. ein paar Anwendungen und Zuweisungen.
+- Niedrigster/Höchster Preis
+- Gesamtsumme
+- Durchschnittspreis
+- Bubblesort Sortierung nach Preis
