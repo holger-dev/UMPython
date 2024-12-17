@@ -29,5 +29,5 @@ Hier wird eine Minimalstruktur OOP gezeigt inkl. ein paar Anwendungen und Zuweis
 - Bubblesort Sortierung nach Preis
 ***
 ## RSA
-Status: VENV OK und lauffähig (aus dem Terminal)
+Status: VENV OK und lauffähig (aus dem Terminal) 
 Ein Mini-Code zur Berechnung des RSA-Verfahrens inkl. erweitertem, euklidischem Algorithmus.
