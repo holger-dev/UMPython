@@ -1,8 +1,12 @@
 # UMPython
-In diesem Repo gibt es div. Unterrichtsmaterialien für Projekte in Python.
+In diesem Repo gibt es div. Unterrichtsmaterialien für Projekte in Python. Die einzelnen Projekte befinden sich in virtuellen Umgebungen. Zum ausführen und starten wie folgt vorgehen:
+1. venv aktivieren -> source /pfad/zum/projekt/bin/activate
+2. requirements installieren -> pip install -r requirements.txt
+3. wie gehabt ausführen
+4. venv verlassen -> deactivate
 ***
 ## Projekt Paintballhalle
-Status: Done  
+Status: Muss noch in eine VENV 
 Dieses Minimalprojekt ist eine Musterlösung für das Projekt Paintballhalle.
 - OOP Grundstruktur
 - drei Klassen, eine main
@@ -10,7 +14,7 @@ Dieses Minimalprojekt ist eine Musterlösung für das Projekt Paintballhalle.
 Die Demodaten zeigen drei Testszenarien. Die Ausgabe ist nur mit True und False, da dieses Minimal-Projekt als Grundlage für ein weiteres Projekt mit GUI dient. Daher ist dies als Grundstruktur des Backends zu sehen.
 ***
 ## Projekt PaintballehalleGUI
-Status: ToDo  
+Status: MUss noch in eine VENV 
 Hier soll die Grundstruktur aus dem Projekt Paintballhalle als Grundlage verwendet und mit einem Frontend verbunden werden. 
 ***
 ## Projekt PaintballhalleGUIundSQLite3
@@ -25,5 +29,5 @@ Hier wird eine Minimalstruktur OOP gezeigt inkl. ein paar Anwendungen und Zuweis
 - Bubblesort Sortierung nach Preis
 ***
 ## RSA
-Status: Aktuell leider Fehlerhaft
+Status: VENV OK und lauffähig (aus dem Terminal)
 Ein Mini-Code zur Berechnung des RSA-Verfahrens inkl. erweitertem, euklidischem Algorithmus.
