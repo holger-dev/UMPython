@@ -20,6 +20,7 @@ Hier soll die Grundstruktur aus dem Projekt Paintballhalle als Grundlage verwend
 ## Projekt PaintballhalleGUIundSQLite3
 Status: ToDo  
 In diesem Projekt werden die Daten persistend gespeichert und die grundlegenden Abläufe mit einer SQL-basierten Datenbank vermittelt. Zusätzlich werden noch Wrapper implementiert, um Datenbankeinträge zu lesen und zu schreiben.
+***
 ## OOPMinimapAutoVerkaeufer
 Status: Done  
 Hier wird eine Minimalstruktur OOP gezeigt inkl. ein paar Anwendungen und Zuweisungen.
