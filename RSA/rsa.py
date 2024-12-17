@@ -1,7 +1,17 @@
+from math import gcd  # Importiere die Funktion gcd für den größten gemeinsamen Teiler
 from prettytable import PrettyTable
 
+# Funktion zur automatischen Generierung von drei geeigneten e-Vorschlägen
+def generate_e_candidates(phi):
+    candidates = []
+    for i in range(2, phi):  # Beginne ab 2, da 1 keinen GGT > 1 haben kann
+        if gcd(i, phi) == 1:  # Prüfe, ob i relativ prim zu phi ist
+            candidates.append(i)
+        if len(candidates) == 3:  # Stoppe, sobald wir 3 Werte gefunden haben
+            break
+    return candidates
 
-# recursive function for euclidean algorithm
+# Rekursive Funktion für den erweiterten Euklidischen Algorithmus
 def get_next_numbers(e, m, lst):
     if e % m == 0:
         return lst + [[e, m, e // m, e % m, 0, 1]]
@@ -9,39 +19,43 @@ def get_next_numbers(e, m, lst):
         new_lst = get_next_numbers(m, e % m, [[e, m, e // m, e % m]])
         a, b = new_lst[1][-2], new_lst[1][-1]
         e_divided_m = new_lst[0][2]
-        new_lst[0].extend([b, a-(e_divided_m * b)])
+        new_lst[0].extend([b, a - (e_divided_m * b)])
         return lst + new_lst
 
+# Eingabe der Primzahlen p und q
+p = int(input("p (Primzahl): "))
+q = int(input("q (Primzahl): "))
 
-# define rsa variables
-p = int(input("p: "))
-q = int(input("q: "))
+# Berechnung von n und phi(n)
 n = p * q
-e = int(input("e: "))
-m = (p - 1) * (q - 1)
+phi = (p - 1) * (q - 1)
 
-mod = e % m
-# copy input variables to modify them
-m_lst = m
-e_lst = e
-# get result of recursiv euclidean algorithm
-lst = get_next_numbers(e_lst, m_lst, [])
-# initialize with 0 and 1
-numbers = [[0, 1]]
-# reverse lst
+# Automatische Vorschläge für e
+print(f"\nMögliche Werte für e (relativ prim zu {phi}):")
+e_candidates = generate_e_candidates(phi)
+for idx, candidate in enumerate(e_candidates, start=1):
+    print(f"{idx}. {candidate}")
+
+# Auswahl von e
+e = int(input("\nWähle einen Wert für e aus den Vorschlägen: "))
+
+# Berechnung von d mit dem erweiterten Euklidischen Algorithmus
+lst = get_next_numbers(e, phi, [])
 lst = lst[::-1]
-# if d is incorrect (smaller than or equal to zero)
-if numbers[-1][0] <= 0:
-    d = numbers[-1][0] + ((p - 1) * (q - 1))
-else:
-    d = numbers[-1][0]
-# convert numbers and steps to table
+
+# Extrahiere d aus der letzten Zeile
+d = lst[0][-2]
+if d <= 0:  # Stelle sicher, dass d positiv ist
+    d += phi
+
+# Darstellung der Berechnungen in einer Tabelle
 table = PrettyTable(["e", "m", "e//m", "e%m", "a", "b"])
-lst = lst[::-1]
-numbers = numbers[::-1]
-for index, i in enumerate(lst):
-    table.add_row(i)
-# print values and table
+for row in lst[::-1]:
+    table.add_row(row)
+
+# Ausgabe der Ergebnisse
+print("\nErweiterter Euklidischer Algorithmus:")
 print(table)
-print("Private: ", d)
-print("Public: e:", e, ", n:", n)
+print("\nErgebnisse:")
+print(f"Öffentlicher Schlüssel (e, n): ({e}, {n})")
+print(f"Privater Schlüssel d: {d}")

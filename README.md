@@ -23,3 +23,7 @@ Hier wird eine Minimalstruktur OOP gezeigt inkl. ein paar Anwendungen und Zuweis
 - Gesamtsumme
 - Durchschnittspreis
 - Bubblesort Sortierung nach Preis
+***
+## RSA
+Status: Aktuell leider Fehlerhaft
+Ein Mini-Code zur Berechnung des RSA-Verfahrens inkl. erweitertem, euklidischem Algorithmus.
