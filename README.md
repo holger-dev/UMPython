@@ -32,3 +32,8 @@ Hier wird eine Minimalstruktur OOP gezeigt inkl. ein paar Anwendungen und Zuweis
 ## RSA
 Status: VENV OK und lauffähig (aus dem Terminal)  
 Ein Mini-Code zur Berechnung des RSA-Verfahrens inkl. erweitertem, euklidischem Algorithmus.
+***
+## API und CSV
+Status: Keine VENV, ist auch nicht nötig
+API-Openweather-Test mit der aktuellen Temperatur in Berlin (API-Key ist nicht mehr aktuell)
+CSV-Test um eine CSV einzulesen.
